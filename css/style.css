@@ -1,0 +1,225 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+  }
+  :root{
+    --darkGreen:#60827B !important;
+    --green:#84A295 !important;
+    --lightGreen:#B7CDC2 !important;
+    --yellow:#f6bf66 !important;
+    --beige:#EAE6DA !important;
+    --creamyWhite:#F7F6EE !important;
+    --gary: #6c757d !important;
+  }
+a {
+  color: #EAE6DA;
+}
+
+a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/me01.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 64px;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: var(--beige);
+}
+
+#hero h2 {
+  color: var(--beige);
+  margin-bottom: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#hero .btn-scroll {
+  transition: 0.4s;
+  color: rgba(255, 255, 255, 0.6);
+  animation: up-down 1s ease-in-out infinite alternate-reverse both;
+}
+
+#hero .btn-scroll i {
+  font-size: 48px;
+}
+
+#hero .btn-scroll:hover {
+  color: #ffb727;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+
+  #resume .row {
+    flex-direction: row !important;
+  }
+}
+
+@media (max-width: 575px) {
+  #hero h1 {
+    font-size: 40px;
+  }
+  #hero h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+/* about---------------------------------------------------------------------- */
+#about h2{
+  font-size: 48px;
+  color: var(--gary);
+}
+#about span{
+  font-weight: 700;
+  color: var(--gary);
+}
+/* skill---------------------------------------------------------------------- */
+#skill h2{
+  font-size: 48px;
+  color: var(--gary);
+}
+#skill ul li{
+  color: var(--gary);
+  font-weight: 600;
+}
+/* resume---------------------------------------------------------------------- */
+#resume{
+  border-left: #60827B 1px solid;
+}
+#resume h2{
+  font-size: 48px;
+  color: var(--gary);
+}
+#resume h3{
+  color: var(--yellow);
+  font-weight: 700;
+}
+#resume h4,h5,p{
+  color: var(--gary);
+  font-weight: 700;
+}
+#resume ul li{
+  color: var(--gary);
+  font-weight: 800;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid var(--gray);
+  position: relative;
+}
+
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--gary);
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: #eef0f2;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid var(--gray);
+}
+/* portfolio--------------------------------------------------------------- */
+#portfolio h2{
+  font-size: 48px;
+  color: var(--gary);
+  margin: 30px 0;
+}
